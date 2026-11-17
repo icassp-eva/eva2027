@@ -24,4 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  document.querySelectorAll(".bio-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var bio = btn.nextElementSibling;
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      bio.hidden = expanded;
+      btn.textContent = expanded ? "Read bio" : "Hide bio";
+    });
+  });
 });

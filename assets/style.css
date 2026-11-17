@@ -378,6 +378,7 @@ section.alt {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   color: #fff;
   font-weight: bold;
   font-size: 1.4rem;
@@ -403,6 +404,36 @@ section.alt {
   color: var(--text-muted);
   font-size: 0.95rem;
   margin: 0;
+}
+
+.speaker-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+.speaker-info p:not(.role) {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.bio-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 4px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--red);
+  cursor: pointer;
+}
+
+.bio-toggle:hover {
+  color: var(--red-dark);
+  text-decoration: underline;
 }
 
 /* Footer */
